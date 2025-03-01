@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.student;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,16 +12,14 @@ import java.util.List;
 @RequestMapping(path ="api/v1/student")
 public class StudentController {
 
+    private final StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
     @GetMapping()
     public List<Student> getStudents() {
-        return List.of(
-                new Student(
-                        1L,
-                        "Paolo",
-                        "paoloespiritu@outlook.com",
-                        21,
-                        LocalDate.of(1998, Month.AUGUST,2)
-                )
-        );
+        return studentService.getStudents();
     }
 }
