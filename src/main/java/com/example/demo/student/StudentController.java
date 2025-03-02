@@ -16,7 +16,7 @@ public class StudentController {
     //reference to student service
     private final StudentService studentService;
 
-    //automatically instantiating StudentService
+    //injecting StudentService rather than having to instantiate a new class
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
