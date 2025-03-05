@@ -4,16 +4,19 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-@Entity
+@Entity //this is for hibernate
 @Table
 public class Student {
     @Id
     @SequenceGenerator(
+            //is this creating the id?
             name = "student_sequence",
             sequenceName = "student_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
+            //adding comments so we can commit as this is now successfully
+            //connecting to our database
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
