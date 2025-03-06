@@ -17,19 +17,15 @@ public class StudentConfig {
     CommandLineRunner commandLineRunner(StudentRepository repository) {
         return args -> {
             Student paolo = new Student(
-                    1L,
                     "Paolo",
                     "test.email@com",
-                    21,
-                    LocalDate.of(2000, JANUARY,5)
+                    21
             );
 
             Student paolo2 = new Student(
-                    2L,
                     "Paolo2",
                     "test2.email@com",
-                    22,
-                    LocalDate.of(1998, JANUARY, 2)
+                    22
             );
 
             //invoke repository to save
