@@ -19,13 +19,13 @@ public class StudentConfig {
             Student paolo = new Student(
                     "Paolo",
                     "test.email@com",
-                    21
+                    LocalDate.of(1998, JANUARY, 2)
             );
 
             Student paolo2 = new Student(
                     "Paolo2",
                     "test2.email@com",
-                    22
+                    LocalDate.of(1997, JANUARY, 1)
             );
 
             //invoke repository to save

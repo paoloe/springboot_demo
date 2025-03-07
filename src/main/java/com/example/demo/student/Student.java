@@ -1,6 +1,7 @@
 package com.example.demo.student;
 
 import jakarta.persistence.*;
+import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 
@@ -23,6 +24,7 @@ public class Student {
     private Long id;
     private String name;
     private String email;
+    @Transient
     private int age;
     private LocalDate dob;
 
@@ -31,21 +33,20 @@ public class Student {
     public Student(Long id,
                    String name,
                    String email,
-                   int age,
                    LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.age = age;
         this.dob = dob;
     }
 
     public Student(String name,
                    String email,
-                   int age) {
+                   LocalDate dob
+                   ) {
         this.name = name;
         this.email = email;
-        this.age = age;
+        this.dob = dob;
     }
 
     public Long getId() {
