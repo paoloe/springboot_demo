@@ -1,9 +1,7 @@
 package com.example.demo.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -25,5 +23,12 @@ public class StudentController {
     @GetMapping()
     public List<Student> getStudents() {
         return studentService.getStudents();
+    }
+
+    //Post is used when we want to add new resources to our system
+    // in our case students
+    @PostMapping()
+    public void registerNewStudent(@RequestBody Student student) {
+        studentService.addNewStudent(student);
     }
 }
