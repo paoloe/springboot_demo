@@ -4,7 +4,13 @@
 
 SpringBoot template that I've created that contains a standard file structure. 
 
-It contains one class (as well as its services loosely coupled) currently name student this can be updated.
+It contains one class (as well as its services loosely coupled) currently named student.
+
+Standard API methods have been impleneted for the class above:
+  - GET
+  - POST
+  - PUT
+  - DELETE
 
 ## Technology Stack
 
